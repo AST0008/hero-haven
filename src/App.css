@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap");
 
 .navbar {
+  max-width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: baseline;
@@ -209,7 +210,7 @@ article {
 
 .card-back {
   transform: rotateY(180deg);
-  background-color:#95AFBA;
+  background-color: #95afba;
   color: #212529;
 }
 
@@ -285,19 +286,17 @@ article {
   text-decoration: underline;
 }
 
-
-
 .hero-edit {
-    max-width: 600px;
-    padding: 20px;
-    border: 1px solid #1e1919;
-    border-radius: 8px;
-    background-color: #95AFBA;
-    display: flex;
-    margin: 50px;
-    justify-content: space-around;
-    align-items: baseline;
-    flex-direction: row-reverse;
+  max-width: 600px;
+  padding: 20px;
+  border: 1px solid #1e1919;
+  border-radius: 8px;
+  background-color: #95afba;
+  display: flex;
+  margin: 50px;
+  justify-content: space-around;
+  align-items: baseline;
+  flex-direction: row-reverse;
 }
 
 .hero-edit form {
@@ -365,24 +364,47 @@ article {
   color: #333;
 }
 
-
-@media (max-width: 768px) {
-  .heros-cards {
-    flex-direction: column;
-    align-items: center;
+@media (max-width: 920px) {
+  article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
-  .card {
-    width: 80%;
+
+
+  .hero-edit {
+    max-width: 600px;
+    margin: 50px auto;
   }
 }
 
-@media (max-width: 442px) {
+@media (max-width: 480px) {
   .cards {
     display: grid;
     max-width: 100%;
     margin: 0 auto;
     grid-template-columns: 1fr;
     justify-items: center;
+  }
+
+  article {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 10rem;
+  }
+  .hero-edit {
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #1e1919;
+    border-radius: 8px;
+    background-color: #95afba;
+    display: flex;
+    margin: 50px;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    align-content: space-around;
   }
 }
